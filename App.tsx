@@ -1,17 +1,16 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
-
-import Home from './src/Home';
-
-function App(): JSX.Element {
+import {LanguageProvider} from './src/Context/LanguageProvider';
+import Home from './src/Screens/Home'; // Your main component
+import {SafeAreaView, StatusBar} from 'react-native';
+function Root() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <ScrollView>
+      <LanguageProvider>
         <Home />
-      </ScrollView>
+      </LanguageProvider>
     </SafeAreaView>
   );
 }
 
-export default App;
+export default Root;
