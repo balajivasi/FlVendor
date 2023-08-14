@@ -1,12 +1,17 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
-const App = () => {
+import Home from './src/Home';
+
+function App(): JSX.Element {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView>
+      <StatusBar />
+      <ScrollView>
+        <Home />
+      </ScrollView>
+    </SafeAreaView>
   );
-};
+}
 
 export default App;
